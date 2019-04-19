@@ -1,0 +1,29 @@
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 100px;
+    grid-gap: 1px;
+}
+
+.box {
+    background-image: url("../img/book.png");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: 150px;
+    padding: 100px;
+    border: 1px solid #000;
+}
+
+.img-x {
+    background-image: url("../img/x.png");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: 150px
+}
+
+.img-o {
+    background-image: url("../img/o.png"); 
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: 150px
+}
