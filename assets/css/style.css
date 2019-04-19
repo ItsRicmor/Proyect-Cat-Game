@@ -1,0 +1,12 @@
+.box-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 100px;
+    grid-gap: 1px;
+}
+
+.box {
+    padding: 100px;
+    text-align: center;
+    border: 1px solid #000;
+}
