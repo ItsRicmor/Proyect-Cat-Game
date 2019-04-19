@@ -12,6 +12,7 @@
     <script src="https://code.jquery.com/jquery-3.4.0.min.js"
         integrity="sha256-BJeo0qm959uMBGb65z40ejJYGSgR7REI4+CW1fNKwOg=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="./JS/scripts.js"></script>
     <title>Game</title>
 </head>
 
@@ -36,18 +37,7 @@
             </div>
         </div>
     </div>
-    <script>
-        $('.box').on('click', function(){
-            let hasClassX = $(this).hasClass('img-x')
-            if(hasClassX){
-                $(this).removeClass('img-x')
-                $(this).addClass('img-o')
-            }else {
-                $(this).removeClass('img-o')
-                $(this).addClass('img-x')
-            }
-        })
-    </script>
+    
 </body>
 
 </html>
