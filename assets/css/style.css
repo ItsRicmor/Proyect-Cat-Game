@@ -7,6 +7,19 @@
 
 .box {
     padding: 100px;
-    text-align: center;
     border: 1px solid #000;
+}
+
+.img-x {
+    background-image: url("../img/x.png");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: 150px
+}
+
+.img-y {
+    background-image: url("../img/y.png"); 
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: 150px
 }
