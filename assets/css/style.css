@@ -6,6 +6,10 @@
 }
 
 .box {
+    background-image: url("../img/book.png");
+    background-repeat: no-repeat, repeat;
+    background-position: center;
+    background-size: 150px;
     padding: 100px;
     border: 1px solid #000;
 }
