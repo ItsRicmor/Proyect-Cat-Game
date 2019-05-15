@@ -1,16 +1,15 @@
 .box-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 100px;
+    padding: 75px;
     grid-gap: 1px;
 }
 
 .box {
-    background-image: url("../img/book.png");
     background-repeat: no-repeat, repeat;
     background-position: center;
     background-size: 150px;
-    padding: 100px;
+    padding: 75px;
     border: 1px solid #000;
 }
 

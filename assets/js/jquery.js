@@ -1,6 +1,4 @@
 $(document).ready(function () {
-    console.log("ready!");
-
     $('.box').on('click', function () {
         let hasClassX = $(this).hasClass('img-x')
         if (hasClassX) {
