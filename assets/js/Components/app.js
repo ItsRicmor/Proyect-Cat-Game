@@ -1,9 +1,73 @@
 const X = 1
 const Y = 2
 
-const intialTurn = X
+var intialTurn = X
+
+const setPlayer = (T) => {
+    this.intialTurn = T
+}
+
+const printModal = () => {
+    const container = document.getElementById("container-modal")
+    const container_cat = document.getElementById("container-cat")
+
+    container_cat.style.display = 'none'
+
+    while (container.hasChildNodes()) {
+        container.removeChild(container.firstChild);
+    }
+    const div = document.createElement("div")
+    div.className = `modal`
+    div.id = `modal`
+    container.appendChild(div)
+
+    const modal = document.getElementById("modal")
+    while (modal.hasChildNodes()) {
+        modal.removeChild(modal.firstChild);
+    }
+
+    const text = document.createElement("div")
+    const txt = document.createElement("p")
+    const btnX = document.createElement("button")
+    const btnY = document.createElement("button")
+
+    btnX.className = `start x-color`
+    btnY.className = `start y-color`
+
+    text.id = `modal-text`
+    btnX.id = `x`
+    btnY.id = `y`
+    btnX.innerHTML = `X`
+    btnY.innerHTML = `O`
+    txt.innerHTML = `Would you like to play ? <br> Please choose X's or O's?`
+
+    modal.appendChild(text)
+    text.appendChild(txt)
+    modal.appendChild(btnX)
+    modal.appendChild(btnY)
+
+    const btnx = document.getElementById("x")
+    const btny = document.getElementById("y")
+
+    btnx.onclick = () => {
+        container.style.display = 'none'
+        setPlayer(X)
+        console.log(intialTurn)
+        container_cat.style.display = ''
+    }
+
+    btny.onclick = () => {
+        container.style.display = 'none'
+        setPlayer(Y)
+        console.log(intialTurn)
+        container_cat.style.display = ''
+    }
+}
+printModal()
+
 let turn = intialTurn
 console.log(turn)
+
 const changeTurn = () => {
     turn = turn == X ? Y : X
 }
@@ -137,6 +201,7 @@ class Cat {
 
 const cat = new Cat(turn);
 cat.beginPlay()
+
 const push = (i, j) => {
     cat.pushBottom(i, j, {printTable})
     if(cat.winnerPlay() !== -1 && cat.endPlay()){
@@ -148,7 +213,7 @@ const printTable = (table) => {
     const container = document.getElementById("container-cat")
     while (container.hasChildNodes()) {
         container.removeChild(container.firstChild);
-     }
+    }
     for (let i = 0; i < TAM; i++) {
         for (let j = 0; j < TAM; j++) {
             const div = document.createElement("div")
@@ -160,3 +225,5 @@ const printTable = (table) => {
     }
 }
 printTable(cat.getTable())
+
+
